@@ -4,37 +4,49 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Payoo home</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
-    <main>
-        <div class="p-2">
+
+        <header>
+          <div class="p-2">
             <div class="stat space-y-6">
               <div class="stat-title text-center">Total Balance</div>
-              <div class="stat-value text-center">10400</div>
-              <div>
-                <button class="btn">Add Money</button>
-                <button class="btn">Cash Out</button>
+              <div class="stat-value text-center" id="main-amount">10400</div>
+              <div class="text-center">
+                <button class="btn btn-primary" id="add-money-btn">Add Money</button>
+                <button class="btn btn-warning" id="cash-out-btn">Cash Out</button>
               </div>
             </div>
-        </div>
+          </div>
+        </header>
 
-        <form class="card-body">
-            <div class="form-control">
-              <label class="label">
-                <span class="label-text">Add Money</span>
-              </label>
-              <input type="text" placeholder="Add Money" class="input input-bordered" required />
-            </div>
-            <div class="form-control">
-              <label class="label">
-                <span class="label-text">Pin</span>
-              </label>
-              <input type="password" placeholder="Enter your pin" class="input input-bordered" required />
-            </div>
-            <div class="form-control mt-6">
-              <button class="btn btn-primary">Add Money</button>
-            </div>
-          </form>
-    </main>
+        <main class="flex justify-center items-center h-[100vh]">
+          <div class="mockup-phone">
+              <div class="display">
+                <div class="artboard artboard-demo phone-1">
+                  <form class="card-body">
+                      <div class="form-control">
+                        <label class="label">
+                          <span class="label-text">Add Money</span>
+                        </label>
+                        <input type="text" placeholder="Add Money" class="input input-bordered" required id="add-money-input" />
+                      </div>
+                      <div class="form-control">
+                        <label class="label">
+                          <span class="label-text">Pin</span>
+                        </label>
+                        <input type="password" placeholder="Your pin" class="input input-bordered" required id="add-money-pin-input" />
+                      </div>
+                      <div class="form-control mt-6">
+                        <button class="btn btn-primary" id="add-money">Add Money</button>
+                      </div>
+                    </form>
+                </div>
+              </div>
+          </div>
+      </main>
+<script src="home.js"></script>
 </body>
 </html>
