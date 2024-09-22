@@ -15,3 +15,20 @@ document.getElementById("add-money").addEventListener("click", function (e)
         alert("Try again!!")
     }
 })
+
+
+document.getElementById("cash-out").addEventListener("click", function (e) {
+    e.preventDefault();
+    let mainBalance = document.getElementById("main-amount").innerText;
+    let cashOutAmount = document.getElementById("cash-out-input").value;
+    let pinNumber = document.getElementById("cash-out-pin-input").value;
+
+    let newBalance = parseFloat(mainBalance) - parseFloat(cashOutAmount);
+
+    if (pinNumber === "123") {
+        document.getElementById("main-amount").innerText = newBalance;
+    }
+    else {
+        alert("Try again!!")
+    }
+})
