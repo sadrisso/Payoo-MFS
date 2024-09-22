@@ -26,7 +26,7 @@
           <div class="mockup-phone">
               <div class="display">
                 <div class="artboard artboard-demo phone-1">
-                  <form class="card-body">
+                  <form class="card-body" id="add-money-form">
                       <div class="form-control">
                         <label class="label">
                           <span class="label-text">Add Money</span>
@@ -43,10 +43,29 @@
                         <button class="btn btn-primary" id="add-money">Add Money</button>
                       </div>
                     </form>
+
+                    <form class="card-body hidden" id="cash-out-form">
+                      <div class="form-control">
+                        <label class="label">
+                          <span class="label-text">Cash Out</span>
+                        </label>
+                        <input type="text" placeholder="Cash Out" class="input input-bordered" required id="cash-out-input" />
+                      </div>
+                      <div class="form-control">
+                        <label class="label">
+                          <span class="label-text">Pin</span>
+                        </label>
+                        <input type="password" placeholder="Your pin" class="input input-bordered" required id="cash-out-pin-input" />
+                      </div>
+                      <div class="form-control mt-6">
+                        <button class="btn btn-warning" id="cash-out">Cash Out</button>
+                      </div>
+                    </form>
                 </div>
               </div>
           </div>
       </main>
 <script src="home.js"></script>
+<script src="feature.js"></script>
 </body>
 </html>
